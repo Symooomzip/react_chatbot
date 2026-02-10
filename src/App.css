@@ -8,7 +8,11 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 
 .app-container {
@@ -21,39 +25,39 @@ body {
 
 /* Theme Colors */
 .light-mode {
-  --sidebar-bg: #FFF5F8;
-  --main-bg: #FFFFFF;
-  --navbar-bg: #FFF0F5;
-  --primary-color: #FF9BAF;
-  --text-color: #2D1F21;
-  --secondary-text: #7A5F62;
-  --border-color: #FFE0E8;
-  --user-msg-bg: #FFF0F5;
-  --bot-msg-bg: #FFF8FA;
-  --input-bg: #FFFFFF;
-  --hover-color: #FFE0E8;
-  --active-nav: #FFC4D4;
-  --input-border: #FFE0E8;
-  --button-color: #FF9BAF;
-  --button-text: #FFFFFF;
+  --sidebar-bg: #f0f8ff;
+  --main-bg: #ffffff;
+  --navbar-bg: #e6f2ff;
+  --primary-color: #5b9fff;
+  --text-color: #1f2d3d;
+  --secondary-text: #5f6a7a;
+  --border-color: #d0e4ff;
+  --user-msg-bg: #e6f2ff;
+  --bot-msg-bg: #f5faff;
+  --input-bg: #ffffff;
+  --hover-color: #d0e4ff;
+  --active-nav: #b3d4ff;
+  --input-border: #d0e4ff;
+  --button-color: #5b9fff;
+  --button-text: #ffffff;
 }
 
 .dark-mode {
-  --sidebar-bg: #3B2D34;
-  --main-bg: #2D2129;
-  --navbar-bg: #3B2D34;
-  --primary-color: #FF9BAF;
-  --text-color: #FFF5F8;
-  --secondary-text: #DCC0CA;
-  --border-color: #5B474F;
-  --user-msg-bg: #4A3B44;
-  --bot-msg-bg: #3B2D34;
-  --input-bg: #4F404A;
-  --hover-color: #4A3B44;
-  --active-nav: #5B474F;
-  --input-border: #5B474F;
-  --button-color: #FF9BAF;
-  --button-text: #2D2129;
+  --sidebar-bg: #2d3b4a;
+  --main-bg: #1f2937;
+  --navbar-bg: #2d3b4a;
+  --primary-color: #5b9fff;
+  --text-color: #f0f8ff;
+  --secondary-text: #c0d0e0;
+  --border-color: #3b4a5b;
+  --user-msg-bg: #374151;
+  --bot-msg-bg: #2d3b4a;
+  --input-bg: #374151;
+  --hover-color: #374151;
+  --active-nav: #3b4a5b;
+  --input-border: #3b4a5b;
+  --button-color: #5b9fff;
+  --button-text: #1f2937;
 }
 
 /* Sidebar Styles */
@@ -96,7 +100,7 @@ body {
 }
 
 .new-chat-button:hover {
-  background-color: #FF82A2;
+  background-color: #4a8fff;
 }
 
 .conversations-list {
@@ -312,8 +316,14 @@ body {
 }
 
 @keyframes bounce {
-  0%, 80%, 100% { transform: scale(0); }
-  40% { transform: scale(1); }
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
 }
 
 .input-area {
@@ -338,7 +348,7 @@ textarea {
   max-height: 200px;
   overflow-y: auto;
   font-family: inherit;
-  box-shadow: 0 0 15px rgba(255, 155, 175, 0.1);
+  box-shadow: 0 0 15px rgba(91, 159, 255, 0.1);
 }
 
 textarea:focus {
@@ -369,7 +379,7 @@ textarea::placeholder {
 }
 
 .send-button:hover {
-  background-color: #FF82A2;
+  background-color: #4a8fff;
   transform: scale(1.05);
 }
 
@@ -390,11 +400,11 @@ textarea::placeholder {
   .main-content {
     transition: margin-left 0.3s ease;
   }
-  
+
   .sidebar.open + .main-content {
     margin-left: 260px;
   }
-  
+
   .sidebar {
     position: fixed;
     top: 0;
@@ -403,11 +413,11 @@ textarea::placeholder {
     width: 260px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
-  
+
   .sidebar.closed {
     transform: translateX(-100%);
   }
-  
+
   .message-content {
     max-width: 100%;
   }

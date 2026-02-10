@@ -8,7 +8,7 @@ function App() {
     return saved ? JSON.parse(saved) : [{
       id: 'conv-' + Date.now(),
       title: 'New conversation',
-      messages: [{ role: 'assistant', content: 'Hello darling! How can I assist you today? 💖' }],
+      messages: [{ role: 'assistant', content: 'Hello! How can I assist you today?' }],
       active: true
     }]
   })
@@ -127,7 +127,7 @@ function App() {
     })).concat({
       id: 'conv-' + Date.now(),
       title: 'New conversation',
-      messages: [{ role: 'assistant', content: 'How can I help you today, darling? 💖' }],
+      messages: [{ role: 'assistant', content: 'How can I help you today?' }],
       active: true
     }))
   }
@@ -144,7 +144,7 @@ function App() {
       if (conv.active) {
         return {
           ...conv,
-          messages: [{ role: 'assistant', content: 'Chat history cleared. How can I help you? 💖' }]
+          messages: [{ role: 'assistant', content: 'Chat history cleared. How can I help you?' }]
         }
       }
       return conv
@@ -182,7 +182,7 @@ function App() {
               className={`conversation-item ${conv.active ? 'active' : ''}`}
               onClick={() => switchConversation(conv.id)}
             >
-              <span className="conversation-icon">✨</span>
+              <span className="conversation-icon">💬</span>
               <span className="conversation-title">{conv.title}</span>
             </div>
           ))}
@@ -200,7 +200,7 @@ function App() {
           
           <div className="sidebar-actions">
             <button onClick={clearChat} className="sidebar-button">
-              <span className="sidebar-button-icon">🌸</span>
+              <span className="sidebar-button-icon">🗑️</span>
               Clear chat
             </button>
             <button onClick={toggleDarkMode} className="sidebar-button">
@@ -218,7 +218,7 @@ function App() {
           <button className="toggle-sidebar-button" onClick={toggleSidebar}>
             {sidebarOpen ? '◀' : '▶'}
           </button>
-          <h1>Mohammed's AI Chat 💖</h1>
+          <h1>Mohammed's AI Chat �</h1>
           <div className="spacer"></div>
         </div>
         
@@ -228,7 +228,7 @@ function App() {
             {messages.map((msg, index) => (
               <div key={index} className={`message ${msg.role}`}>
                 <div className="message-avatar">
-                  {msg.role === 'assistant' ? '🤖' : '🎀'}
+                  {msg.role === 'assistant' ? '🤖' : '👤'}
                 </div>
                 <div className="message-content">
                   <div className="message-bubble">
